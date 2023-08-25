@@ -8,15 +8,6 @@ on:
 
 jobs:
   ui-tests:
-    strategy:
-      matrix:
-        include:
-          - xcodeVersion: 13.1
-            deviceName: iPhone X
-            iosVersion: 15.0
-          - xcodeVersion: 14.2
-            deviceName: iPhone 14
-            iosVersion: 16.2
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
