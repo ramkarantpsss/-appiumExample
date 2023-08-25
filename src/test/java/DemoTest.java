@@ -18,7 +18,7 @@ public class DemoTest {
     @BeforeClass
     public void setUp() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("automationName" , "espresso");
+        caps.setCapability("automationName" , "UiAutomator2");
         caps.setCapability("platformName" , "Android");
         caps.setCapability("appium:platformVersion" , "9");
         caps.setCapability("appium:deviceName" , "Android Emulator");
