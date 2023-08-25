@@ -17,6 +17,7 @@ public class DemoTest {
 
     @BeforeClass
     public void setUp() throws MalformedURLException {
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test Start>>>>>>>>>>>>>>>>>>>>");
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("automationName" , "UiAutomator2");
         caps.setCapability("platformName" , "Android");
@@ -35,8 +36,8 @@ public class DemoTest {
         driver.findElement(By.id("buttonEqual")).click();
     }
     @AfterClass
-    public void tearDown()
-    {
+    public void tearDown()    {
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test End>>>>>>>>>>>>>>>>>>>>");
         driver.quit();
     }
 }
