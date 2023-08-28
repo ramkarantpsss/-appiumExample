@@ -1,9 +1,9 @@
 name: Appium CI
 on:
   push:
-    branches: [ master ]
+    branches: [ TestDevelopment ]
   pull_request:
-    branches: [ master ]
+    branches: [ TestDevelopment ]
   workflow_dispatch:
 
 jobs:
