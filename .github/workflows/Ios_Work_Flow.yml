@@ -37,7 +37,7 @@ jobs:
         xcrun simctl boot $DEVICEUUID 
 
     - name: Run Test
-      run: ./gradlew xcuiTest
+      run: ./gradlew test --info
     - name: Upload test report
       uses: actions/upload-artifact@v2
       with:
