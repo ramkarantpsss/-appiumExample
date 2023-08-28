@@ -34,8 +34,11 @@ jobs:
         xcrun simctl create TestiPhoneX com.apple.CoreSimulator.SimDeviceType.iPhone-X com.apple.CoreSimulator.SimRuntime.iOS-15-4 > deviceid.txt 
         DEVICEUUID=`cat deviceid.txt`          
         echo $DEVICEUUID        
-        xcrun simctl boot $DEVICEUUID 
+        xcrun simctl boot $DEVICEUUID &
 
+    - name: Run Test
+      run: | 
+        appium --platform-name "iOS"
     - name: Upload test report
       uses: actions/upload-artifact@v2
       with:
