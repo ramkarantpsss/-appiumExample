@@ -26,7 +26,7 @@ public class DemoTest {
         DesiredCapabilities iosCapabilities = new DesiredCapabilities();
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.4");
-        iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iOS 15.4");
+        iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/BStackSampleApp.ipa");
         iosCapabilities.setCapability("automationName", "XCUITest"); // Automation name for iOS
         iosCapabilities.setCapability("isHeadless", true);
