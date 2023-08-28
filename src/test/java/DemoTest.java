@@ -29,7 +29,7 @@ public class DemoTest {
         iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iOS 15.4");
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/BStackSampleApp.ipa");
         iosCapabilities.setCapability("automationName", "XCUITest"); // Automation name for iOS
-
+        iosCapabilities.setCapability("isHeadless", true);
         driver = new IOSDriver<>(new URL(mHost), iosCapabilities);
 
 
