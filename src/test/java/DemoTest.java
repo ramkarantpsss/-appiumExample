@@ -33,8 +33,8 @@ public class DemoTest {
     //    driver = new IOSDriver<>(new URL(mHost), iosCapabilities);
 
 
-//
-//        // Create an Android driver using Android desired capabilities
+
+        // Create an Android driver using Android desired capabilities
        DesiredCapabilities androidCapabilities = new DesiredCapabilities();
         androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
