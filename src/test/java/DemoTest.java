@@ -1,6 +1,7 @@
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -14,7 +15,7 @@ import io.appium.java_client.ios.IOSDriver;
 
 public class DemoTest {
 
-    AppiumDriver driver;
+    WebDriver driver;
     String mHost="http://localhost:4723/wd/hub";
 
     @BeforeClass
@@ -28,7 +29,7 @@ public class DemoTest {
         iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set .app file>>>>>>>>>>>>>>>>>>>>");
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/testios.app");
-        iosCapabilities.setCapability("automationName", "XCUITest"); // Automation name for iOS
+        iosCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities >>>>>>>>>>>>>>>>>>>>");
         driver= new IOSDriver(new URL(mHost), iosCapabilities);
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities Done >>>>>>>>>>>>>>>>>>>>");
