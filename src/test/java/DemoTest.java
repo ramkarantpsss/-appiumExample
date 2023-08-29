@@ -31,7 +31,7 @@ public class DemoTest {
         iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/BStackSampleApp.ipa");
         iosCapabilities.setCapability("automationName", "XCUITest"); // Automation name for iOS
-        driver = new IOSDriver<>(new URL(mHost), iosCapabilities);
+        new IOSDriver<>(new URL(mHost), iosCapabilities);
 
 
 ////
@@ -53,6 +53,6 @@ public class DemoTest {
     @AfterClass
     public void tearDown()    {
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test End>>>>>>>>>>>>>>>>>>>>");
-        driver.quit();
+       // driver.quit();
     }
 }
