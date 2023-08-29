@@ -1,9 +1,6 @@
+
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -17,7 +14,7 @@ import io.appium.java_client.ios.IOSDriver;
 
 public class DemoTest {
 
-    AppiumDriver<MobileElement> driver;
+    AppiumDriver driver;
     String mHost="http://localhost:4723/wd/hub";
 
     @BeforeClass
@@ -33,7 +30,7 @@ public class DemoTest {
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/testios.app");
         iosCapabilities.setCapability("automationName", "XCUITest"); // Automation name for iOS
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities >>>>>>>>>>>>>>>>>>>>");
-        new IOSDriver<>(new URL(mHost), iosCapabilities);
+        driver= new IOSDriver(new URL(mHost), iosCapabilities);
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities Done >>>>>>>>>>>>>>>>>>>>");
 
     }
@@ -45,6 +42,6 @@ public class DemoTest {
     @AfterClass
     public void tearDown()    {
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test End>>>>>>>>>>>>>>>>>>>>");
-       // driver.quit();
+        driver.quit();
     }
 }
