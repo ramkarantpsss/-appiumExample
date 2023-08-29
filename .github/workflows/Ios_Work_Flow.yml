@@ -27,7 +27,7 @@ jobs:
           xcrun simctl list
     - name: Install iOS 11.4 Runtime
       run: |
-          gem install xcode-install -v 14.2
+          gem install xcode-install -v 14.3.1
           xcversion simulators --install='iOS 16.2'
     - name: Create and Run iOS Emulator - iPhoneX on iOS 16.2, Update default appium config for iOS
       run: |
