@@ -29,20 +29,12 @@ public class DemoTest {
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.4");
         iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
-        iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/BStackSampleApp.ipa");
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set .app file>>>>>>>>>>>>>>>>>>>>");
+        iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/testios.app");
         iosCapabilities.setCapability("automationName", "XCUITest"); // Automation name for iOS
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities >>>>>>>>>>>>>>>>>>>>");
         new IOSDriver<>(new URL(mHost), iosCapabilities);
-
-
-////
-////        // Create an Android driver using Android desired capabilities
-//       DesiredCapabilities androidCapabilities = new DesiredCapabilities();
-//        androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-//        androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
-//        androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 4");
-//        androidCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/app-debug.apk");
-//        androidCapabilities.setCapability("automationName", "UiAutomator2"); // Automation name for Android
-//        driver = new AndroidDriver<>(new URL(mHost), androidCapabilities);
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities Done >>>>>>>>>>>>>>>>>>>>");
 
     }
 
