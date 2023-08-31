@@ -20,24 +20,17 @@ public class DemoTest {
 
     @BeforeClass
     public void setUp() throws MalformedURLException {
-        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test Start>>>>>>>>>>>>>>>>>>>>");
 
 
         DesiredCapabilities iosCapabilities = new DesiredCapabilities();
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "14.2");
         iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
-        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set .app file>>>>>>>>>>>>>>>>>>>>");
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/Runner.app");
         iosCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-        iosCapabilities.setCapability(MobileCapabilityType.NO_RESET, "true");
-
-        iosCapabilities.setCapability("wdaStartupRetries", "4");
-        iosCapabilities.setCapability("iosInstallPause","8000" );
-        iosCapabilities.setCapability("wdaStartupRetryInterval", "20000");
         iosCapabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 3600);
 
-        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities start>>>>>>>>>>>>>>>>>>>>");
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test Start and setting iosCapabilities>>>>>>>>>>>>>>>>>>>>");
         driver= new IOSDriver(new URL(mHost), iosCapabilities);
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities Done >>>>>>>>>>>>>>>>>>>>");
 
