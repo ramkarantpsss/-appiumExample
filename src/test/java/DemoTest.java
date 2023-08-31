@@ -32,6 +32,11 @@ public class DemoTest {
         iosCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
         iosCapabilities.setCapability(MobileCapabilityType.NO_RESET, "true");
 
+        iosCapabilities.setCapability("wdaStartupRetries", "4");
+        iosCapabilities.setCapability("iosInstallPause","8000" );
+        iosCapabilities.setCapability("wdaStartupRetryInterval", "20000");
+        iosCapabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 3600);
+
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities start>>>>>>>>>>>>>>>>>>>>");
         driver= new IOSDriver(new URL(mHost), iosCapabilities);
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities Done >>>>>>>>>>>>>>>>>>>>");
