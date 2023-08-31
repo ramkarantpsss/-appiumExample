@@ -16,7 +16,7 @@ import io.appium.java_client.ios.IOSDriver;
 public class DemoTest {
 
     WebDriver driver;
-    String mHost="http://localhost:4723";
+    String mHost="http://localhost:4723/wd/hub";
 
     @BeforeClass
     public void setUp() throws MalformedURLException {
@@ -30,6 +30,8 @@ public class DemoTest {
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set .app file>>>>>>>>>>>>>>>>>>>>");
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/Runner.app");
         iosCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
+        iosCapabilities.setCapability(MobileCapabilityType.NO_RESET, "true");
+
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities start>>>>>>>>>>>>>>>>>>>>");
         driver= new IOSDriver(new URL(mHost), iosCapabilities);
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities Done >>>>>>>>>>>>>>>>>>>>");
