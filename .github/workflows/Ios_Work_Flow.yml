@@ -19,8 +19,6 @@ jobs:
         distribution: 'temurin'
         java-version: 11
         cache: 'gradle'
-    - name: Check Chorme version
-      run: chrome --version
     - name: setup Chrome Driver
       run: |
         export DISPLAY=:99
