@@ -1,4 +1,4 @@
-name: Appium CI
+name: IOS CI
 on:
   push:
     branches: [ master ]
