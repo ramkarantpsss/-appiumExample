@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
-npm install -g appium@next
-npm install -g appium-doctor
+npm install appium@next
+npm install appium-doctor
 appium driver install xcuitest@4.16.5
 appium driver install --source=npm appium-flutter-driver
 
