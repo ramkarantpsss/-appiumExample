@@ -15,7 +15,7 @@ import io.appium.java_client.ios.IOSDriver;
 
 public class DemoTest {
 
-    WebDriver driver;
+    IOSDriver driver;
     String mHost="http://localhost:4723";
 
     @BeforeClass
@@ -28,9 +28,7 @@ public class DemoTest {
         iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/Runner.app");
         iosCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-        iosCapabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 3600);
-
-        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test Start and setting iosCapabilities>>>>>>>>>>>>>>>>>>>>");
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test Start and setting iosCapabilities >>>>>>>>>>>>>>>>>>>>");
         driver= new IOSDriver(new URL(mHost), iosCapabilities);
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities Done >>>>>>>>>>>>>>>>>>>>");
 
