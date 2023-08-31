@@ -1,9 +1,10 @@
 #!/bin/bash
 set -ex
 npm install -g appium@next
-appium driver install uiautomator2
+npm install -g appium-doctor
 appium driver install xcuitest
 appium driver install --source=npm appium-flutter-driver
 
 appium -v
-appium --log appium.log &>/dev/null &
+appium-doctor --ios
+appium  &

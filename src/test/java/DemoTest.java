@@ -15,7 +15,7 @@ import io.appium.java_client.ios.IOSDriver;
 
 public class DemoTest {
 
-    IOSDriver driver;
+    WebDriver driver;
     String mHost="http://localhost:4723";
 
     @BeforeClass
