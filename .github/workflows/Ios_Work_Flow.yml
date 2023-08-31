@@ -19,10 +19,6 @@ jobs:
         distribution: 'temurin'
         java-version: 11
         cache: 'gradle'
-    - name: setup Chrome Driver
-      run: |
-        export DISPLAY=:99
-        chromedriver --url-base=/wd/hub
     - name: Install the Appium and Driver
       run: |
         chmod +x ./scripts/RunAppiumServer.sh
