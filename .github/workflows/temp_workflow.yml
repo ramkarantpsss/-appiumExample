@@ -1,0 +1,13 @@
+name: Android Automation Report
+on:
+  push:
+        branches: [ TestDevelopment ]
+  workflow_dispatch:
+
+jobs:
+  ui-tests:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Start Session Recording
+      run: echo "hello"
